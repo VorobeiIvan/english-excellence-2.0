@@ -148,39 +148,6 @@ npm install vite-plugin-image-optimizer --save-dev
 
 Ми винесли параметри оптимізації в окремий файл imageOptimizer.ts, щоб зробити код більш структурованим.
 
-📄 **Файл:** src/config/imageOptimizer.ts
-
-```ts
-const imageOptimizerOptions = {
-  test: /\.(png|jpe?g|gif|tiff|webp|avif)$/i, // Оптимізація лише для зображень
-  include: ['src/assets/img/**/*.{png,jpg,jpeg,gif,tiff,webp,avif}'], // Всі зображення в `src/assets/img/`
-  includePublic: false, // Не обробляємо зображення в `public/`
-  logStats: true, // Виводимо статистику в консоль
-  png: { quality: 80 },
-  jpeg: { quality: 85 },
-  tiff: { quality: 80 },
-  gif: {},
-  webp: { quality: 80, lossless: false },
-  avif: { quality: 80, lossless: false },
-  cache: true, // Використовуємо кеш для швидшої роботи
-}
-export default imageOptimizerOptions
-```
-
-📄 **Файл:** vite.config.ts
-
-```ts
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
-
-import imageOptimizerOptions from './src/config/imageOptimizer'
-
-export default defineConfig({
-  plugins: [vue(), ViteImageOptimizer(imageOptimizerOptions)],
-})
-```
-
 ### ⚙️ Як це працює?
 
 ✅ Під час запуску білда (npm run build) плагін автоматично знаходить всі зображення в src/assets/img/ і оптимізує їх.
@@ -294,3 +261,53 @@ npm run build
 ```
 
 Після виконання команди npm run build всі SVG файли будуть оптимізовані і додані до спрайту. Ви отримаєте легші SVG іконки, які можуть бути використані у вашому проекті.
+
+## Робота з шрифтами
+
+### 🎨 Використання FontScanner у Figma
+
+Щоб знайти, які шрифти використовуються у Figma, можна скористатися плагіном **FontScanner**. Він дозволяє зібрати всі шрифти з поточного файлу та компонентів:
+
+1. Відкрий макет у Figma.
+2. Перейди в **Plugins** → **FontScanner**.
+3. Запусти плагін, і він покаже всі шрифти, що використовуються в дизайні.
+4. Використай цей список для визначення, які шрифти треба додати в проєкт.
+
+---
+
+### 🔹 Локальне завантаження та оптимізація через Transfonter
+
+Якщо хочеш використовувати шрифти локально:
+
+1. Завантаж **Manrope** з [Google Fonts](https://fonts.google.com/).
+2. Перейди на [Transfonter](https://transfonter.org/).
+3. Завантаж файли `.ttf`, обери формат `woff2` (цей формат є більш стиснутим і оптимізованим для веб-ресурсів) і натисни **Convert**.
+4. Скачай оптимізовані файли й додай їх у проєкт, наприклад, у `src/assets/fonts/`.
+5. Підключи у SCSS:
+
+```scss
+@font-face {
+  font-family: 'Manrope';
+  src: url('@/assets/fonts/Manrope-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('@/assets/fonts/Manrope-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('@/assets/fonts/Manrope-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+```
