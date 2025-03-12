@@ -1,4 +1,4 @@
-# .
+#
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -62,3 +62,61 @@ npm run test:e2e -- --debug
 ```sh
 npm run lint
 ```
+
+## [Conventional Commits](https://www.conventionalcommits.org/uk/v1.0.0/#summary)
+
+### Основні типи Conventional Commits
+
+| Тег         | Коли використовувати?                                 |
+| ----------- | ----------------------------------------------------- |
+| `init:`     | Початковий коміт проєкту                              |
+| `feat:`     | Додавання нової функціональності                      |
+| `fix:`      | Виправлення багів                                     |
+| `chore:`    | Налаштування, оновлення залежностей, конфіги          |
+| `docs:`     | Зміни у документації                                  |
+| `refactor:` | Покращення коду без зміни логіки                      |
+| `style:`    | Форматування коду (відступи, лапки, без зміни логіки) |
+
+### Приклад практичного використання
+
+1. **Початковий коміт проєкту:**
+
+   ```bash
+   git commit -m "init: initialize Vue 3 project with Vite"
+   ```
+
+2. **Додавання нової функціональності:**
+
+   ```bash
+   git commit -m "feat: add user authentication feature"
+   ```
+
+3. **Виправлення багу:**
+
+   ```bash
+   git commit -m "fix: resolve issue with form validation"
+   ```
+
+4. **Налаштування, оновлення залежностей або конфіги:**
+
+   ```bash
+   git commit -m "chore: update package dependencies"
+   ```
+
+5. **Зміни в документації:**
+
+   ```bash
+   git commit -m "docs: update README with setup instructions"
+   ```
+
+6. **Покращення коду без зміни логіки:**
+
+   ```bash
+   git commit -m "refactor: optimize the login validation function"
+   ```
+
+7. **Форматування коду (відступи, лапки, без зміни логіки):**
+
+   ```bash
+   git commit -m "style: format code to follow eslint rules"
+   ```
