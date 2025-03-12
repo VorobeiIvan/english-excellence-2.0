@@ -129,3 +129,7 @@ npm run lint
 ## My Repository Link
 
 [GitHub](https://github.com/VorobeiIvan/english-excellence-2.0)
+
+## Favicon Creation
+
+Для створення **favicon** для цього проєкту, я використав онлайн-інструмент [favicon.cc](https://www.favicon.cc/). Спочатку я завантажив PNG-версію з макету у Figma, а потім перетворив її на файл favicon.ico, який тепер використовується в проєкті.
