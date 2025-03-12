@@ -120,3 +120,12 @@ npm run lint
    ```bash
    git commit -m "style: format code to follow eslint rules"
    ```
+
+## Figma Markup Project
+
+- [GoIT link](https://www.figma.com/design/MrdZUmIfeT1bKd8u5GWLRt/English-Excellence-2.0?node-id=0-1&t=WLyOAywO8J86pYBl-1)
+- [My copy link](<https://www.figma.com/design/igHYuMj2fNI1anWXZzRjR3/English-Excellence-2.0-(Copy)?node-id=0-1&t=OmwC66Iw8GOOcCZk-1>)
+
+## My Repository Link
+
+[GitHub](https://github.com/VorobeiIvan/english-excellence-2.0)
