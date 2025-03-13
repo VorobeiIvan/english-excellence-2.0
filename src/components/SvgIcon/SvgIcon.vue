@@ -15,11 +15,15 @@ defineProps({
     type: Number,
     default: 24,
   },
+  className: {
+    type: String,
+    default: '',
+  },
 })
 </script>
 
 <template>
-  <svg :class="['svg-icon', `${name}-icon`]" :width="width" :height="height">
+  <svg :class="['svg-icon', className]" :width="width" :height="height">
     <use :xlink:href="`${spriteUrl}#icon-${name}`" />
   </svg>
 </template>

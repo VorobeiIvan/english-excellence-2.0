@@ -2,14 +2,23 @@
   display: flex;
   gap: 12px;
 }
-.social-media__item {
+.social-media-item {
   display: flex;
   padding: 8px;
   align-items: center;
   gap: 8px;
   border-radius: 10px;
   border: 1px solid rgba(18, 20, 23, 0.1);
+  &:hover,
+  &:focus {
+    .social-media-icon {
+      color: #4dc274;
+    }
+  }
 }
-.social-media__link {
+.social-media-link {
+}
+.social-media-icon {
   color: #121417;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
