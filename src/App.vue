@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 </script>
@@ -6,11 +6,6 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <header>
     <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
-    <svg style="width: 25px; height: 25px; color: red">
-      <use xlink:href="#icon-social-media-facebook"></use>
-    </svg>
-    <p>Welcome to your Vue 3 + Vite app</p>
-    <img src="./assets/img/hero/desktop/hero-image.png" alt="" />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
