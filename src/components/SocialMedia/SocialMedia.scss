@@ -1,0 +1,15 @@
+.social-media {
+  display: flex;
+  gap: 12px;
+}
+.social-media__item {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(18, 20, 23, 0.1);
+}
+.social-media__link {
+  color: #121417;
+}
