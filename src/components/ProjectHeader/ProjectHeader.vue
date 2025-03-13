@@ -4,6 +4,7 @@ import ProjectNav from '../ProjectNav/ProjectNav.vue'
 import SocialMedia from '../SocialMedia/SocialMedia.vue'
 import SvgIcon from '../SvgIcon/SvgIcon.vue'
 import ProjectBtn from '../ProjectBtn/ProjectBtn.vue'
+import MobileMenu from '../MobileMenu/MobileMenu.vue'
 
 import './ProjectHeader.scss'
 </script>
@@ -13,6 +14,7 @@ import './ProjectHeader.scss'
     <ProjectLogo />
     <ProjectNav />
     <SocialMedia />
+    <MobileMenu />
     <ProjectBtn name="burger" type="button" class="header-btn">
       <SvgIcon name="menu" width="32" height="32" class="header-btn-icon" />
     </ProjectBtn>

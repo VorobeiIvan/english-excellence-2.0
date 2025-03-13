@@ -1,4 +1,4 @@
-.header-nav {
+.nav {
   display: flex;
   gap: 20px;
   align-items: center;
@@ -10,9 +10,8 @@
   font-weight: 600;
   line-height: 18px; /* 128.571% */
 }
-.header-nav-item {
-}
-.header-nav-link {
+
+.nav-link {
   position: relative;
   transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   &::after {
@@ -27,7 +26,7 @@
   }
 }
 
-.header-nav-item:hover .header-nav-link::after,
-.header-nav-item:focus .header-nav-link::after {
+.nav-item:hover .nav-link::after,
+.nav-item:focus .nav-link::after {
   width: 40px;
 }
